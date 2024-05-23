@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . ./
 RUN npm install
 #RUN npm audit fix --force
-RUN npm run dev
+RUN npm run build
 
 
 # Stage 2 - the production environment
