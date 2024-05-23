@@ -1,8 +1,11 @@
 # Stage 1
 FROM node:16.14 as react-build
 WORKDIR /app
-COPY . ./
+#COPY . ./
+COPY package*.json ./
+COPY vite.config.js ./
 RUN npm install
+COPY . ./
 #RUN npm audit fix --force
 RUN npm run build
 
